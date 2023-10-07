@@ -22,8 +22,8 @@ from spaceapps2023.views import map_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index.html', home),
-    path('about.html', about_page),
-    path('map.html', map_page),
-    path('playground/', include("playground.urls"))
+    path('', home, name='home'),
+    path('index.html', home, name='home'),
+    path('about.html', about_page, name='about'),
+    path('map.html', map_page, name = 'map'),
 ]

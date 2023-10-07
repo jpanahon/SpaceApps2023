@@ -17,9 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from spaceapps2023.views import home
+from spaceapps2023.views import about_page
+from spaceapps2023.views import map_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
+    path('about.html', about_page),
+    path('map.html', map_page),
     path('playground/', include("playground.urls"))
 ]

@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website - About the Team</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add the hover effect for planet images */
+        .planet-hover:hover {
+            transform: scale(1.3); /* Scale the planet to 120% of its initial size */
+            
+}
+
+    </style>
 </head>
 <body>
     <header>
@@ -18,23 +26,27 @@
             <li><a href="map.html">Map</a></li>
         </ul>
     </nav>
-    <ul class ="planets">
-<l1> <img src="/src/images/580b585b2edbce24c47b270f.png">    </img>    </l1>
-<l1> <img>    </img>    </l1>
-<l1> <img>    </img>    </l1>
-<l1> <img>    </img>    </l1>
-<l1> <img>    </img>    </l1>
-<l1> <img>    </img>    </l1>
+    <!-- Planet images with the hover effect class -->
+    <img class="planetssun planet-hover" src="images/580b585b2edbce24c47b270f.png">
+    <img class="planetsmerc planet-hover" src="images/mercury (1).png">
+    <img class="planetsven planet-hover" src="images/venus.png">
+    <img class="planetsgaia planet-hover" src="images/earth.png">
+    <img class="planetsmars planet-hover" src="images/mars (1).png">
+    <img class="planetsjew planet-hover" src="images/jupiter.png">
+    <img class="planetssat planet-hover" src="images/saturn.png">
 
-
-
-    </ul>
+    <!-- Your main content here -->
     <main>
         <section id="team" class="page">
             <h1 class="team">About the Team</h1>
             <p></p>
         </section>
     </main>
+    
+    <!-- Background image -->
     <img src="/src/images/wp7034448-minimalist-universe-wallpapers.png" alt="alternative-text" class="image-class">
+    
+    <!-- Include any JavaScript or external scripts you need -->
+    <script src="preload-images.js"></script>
 </body>
 </html>

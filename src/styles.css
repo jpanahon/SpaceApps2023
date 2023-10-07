@@ -13,8 +13,8 @@ body {
 header {
     background-color: transparent; /* Make the header background transparent */
     color: rgb(252, 240, 240);
-    margin-top: 300px;
-    padding: 20px;
+    margin-top: 20%; /* Adjust the margin-top with percentage */
+    padding: 2%; /* Adjust padding with percentage */
     text-align: center;
     position: relative; /* Add this for positioning */
     z-index: 1; /* Ensure the header stays on top of other elements */
@@ -26,41 +26,73 @@ header {
     text-align: center;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 40%;
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
     z-index: 2; /* Ensure the navbar stays on top of other elements */
 }
+
+.nav-about ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Use flexbox to align the items horizontally */
+}
+
+.nav-about li {
+    margin-right: 15%;
+    margin-top: -150%;
+}
+
+.nav-about a {
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+    padding: 4% 3%; /* Adjust padding to make the buttons bigger or smaller */
+    border-radius: 15 px;
+    border-color: #0a0000;
+    color: rgb(255, 255, 255);
+    font-size: 130%; /* Adjust font size to make the text bigger or smaller */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+}
+
+
 
 /* Style for the index navbar */
 .nav-index {
     background-color: transparent; /* Make the navbar invisible */
     text-align: center;
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%); /* Center horizontally and vertically */
     z-index: 2; /* Ensure the navbar stays on top of other elements */
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin-top: 0%;
+    margin-left: 37%;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-left: 2%; /* Adjust the margin value for equal spacing between buttons */
 }
 
 /* Style for navbar links */
 nav a {
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 20px; /* Add padding to create a white box around the links */
+    text-align: center;
+    padding: 1% 1%; /* Adjust padding with percentage */
     background-color: white; /* Set the background color to white */
     border-radius: 15px; /* Add rounded corners */
     border-color: #0a0000;
     color: rgb(12, 0, 0);
+    transition: transform 0.5s ease;
+}
+nav a:hover {
+    transform: scale(1.); /* Scale the link to 110% of its initial size */
 }
 
 /* Page Styles */
@@ -78,19 +110,19 @@ nav a {
 
 /* Main Heading Style */
 h1 {
-    font-size: 36px;
+    font-size: 3vw; /* Adjust font size with vw unit */
     margin: 0; /* Remove margin to eliminate space */
 }
 
 /* Section Heading Style */
 h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 2vw; /* Adjust font size with vw unit */
+    margin-bottom: 2%; /* Adjust margin with percentage */
 }
 
 /* Paragraph Style */
 p {
-    font-size: 18px;
+    font-size: 1.5vw; /* Adjust font size with vw unit */
 }
 
 /* Add styles for the image */
@@ -104,19 +136,71 @@ p {
 }
 
 .team {
-    margin-top: -10px;
+    margin-top: -2%; /* Adjust margin with percentage */
 }
 
-/* Center-align the navigation links */
-.center-nav {
-    text-align: center;
+/* Planet Styles */
+.planetssun {
+    position: relative;
+    width: 45%; /* Adjust the percentage for the relative width */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: -25%; /* Adjust margin-left with percentage */
+    margin-top: -15%; /* Adjust margin-top with percentage */
+    transition: transform 0.5s ease
+}
+
+.planetsmerc {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 7%; /* Adjust the percentage for the relative width */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: -3%; /* Adjust margin-left to create spacing */
+    margin-top: 5%; /* Adjust margin-top with percentage */
+    transition: transform 0.5s ease
+}
+.planetsven {
+    position: absolute;
+    width: 12%; /* Adjust the percentage for the relative width */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 4%; /* Adjust margin-left to create spacing */
+    margin-top: 2%; /* Adjust margin-top with percentage */
+    transition: transform 0.5s ease
+
+}
+.planetsgaia {
+    position: absolute;
+    width: 13%; /* Adjust the percentage for the relative width */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 15%; /* Adjust margin-left to create spacing */
+    margin-top: 1%; /* Adjust margin-top with percentage */
+    transition: transform 0.5s ease
+
 }
 
-.center-nav li {
-    display: inline;
-    margin-right: 20px;
+.planetsmars {
+    position: absolute;
+    width: 14%; /* Adjust the percentage for the relative width */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 27%; /* Adjust margin-left to create spacing */
+    margin-top: 1%; /* Adjust margin-top with percentage */
+    transition: transform 0.5s ease
 }
+.planetsjew{
+    position: absolute;
+    width: 22%; /* Adjust the percentage for the relative width */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 38%; /* Adjust margin-left to create spacing */
+    margin-top: -5%; /* Adjust margin-top with percentage */
+    transition: transform 0.5s ease
+
+}
+
+.planetssat{
+    position: absolute;
+    width: 30%; /* Adjust the percentage for the relative width */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 55%; /* Adjust margin-left to create spacing */
+    margin-top: -3%; /* Adjust margin-top with percentage */
+    transition: transform 0.5s ease
+
+}
+

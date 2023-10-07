@@ -20,7 +20,19 @@ header {
     z-index: 1; /* Ensure the header stays on top of other elements */
 }
 
-nav {
+/* Style for the about navbar */
+.nav-about {
+    background-color: transparent; /* Make the navbar invisible */
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure the navbar stays on top of other elements */
+}
+
+/* Style for the index navbar */
+.nav-index {
     background-color: transparent; /* Make the navbar invisible */
     text-align: center;
     position: absolute;
@@ -40,13 +52,15 @@ nav ul li {
     margin-right: 20px;
 }
 
+/* Style for navbar links */
 nav a {
     text-decoration: none;
-    color: rgb(12, 0, 0);
     font-weight: bold;
     padding: 10px 20px; /* Add padding to create a white box around the links */
     background-color: white; /* Set the background color to white */
-    border-radius: 5px; /* Add rounded corners */
+    border-radius: 15px; /* Add rounded corners */
+    border-color: #0a0000;
+    color: rgb(12, 0, 0);
 }
 
 /* Page Styles */
@@ -87,4 +101,22 @@ p {
     top: 0;
     left: 0;
     z-index: -1; /* Place the image behind the content */
+}
+
+.team {
+    margin-top: -10px;
+}
+
+/* Center-align the navigation links */
+.center-nav {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-nav li {
+    display: inline;
+    margin-right: 20px;
 }

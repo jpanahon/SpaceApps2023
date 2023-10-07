@@ -13,6 +13,7 @@ body {
 header {
     background-color: transparent; /* Make the header background transparent */
     color: rgb(252, 240, 240);
+    margin-top: 300px;
     padding: 20px;
     text-align: center;
     position: relative; /* Add this for positioning */
@@ -43,6 +44,9 @@ nav a {
     text-decoration: none;
     color: rgb(12, 0, 0);
     font-weight: bold;
+    padding: 10px 20px; /* Add padding to create a white box around the links */
+    background-color: white; /* Set the background color to white */
+    border-radius: 5px; /* Add rounded corners */
 }
 
 /* Page Styles */

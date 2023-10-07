@@ -12,7 +12,7 @@ body {
 
 header {
     background-color: transparent; /* Make the header background transparent */
-    color: rgb(252, 240, 240);
+    color: rgb(10, 0, 0);
     margin-top: 20%; /* Adjust the margin-top with percentage */
     padding: 2%; /* Adjust padding with percentage */
     text-align: center;
@@ -85,7 +85,7 @@ nav a {
     font-weight: bold;
     text-align: center;
     padding: 1% 1%; /* Adjust padding with percentage */
-    background-color: white; /* Set the background color to white */
+    background-color: rgb(0, 0, 0); /* Set the background color to white */
     border-radius: 15px; /* Add rounded corners */
     border-color: #0a0000;
     color: rgb(12, 0, 0);
@@ -203,4 +203,60 @@ p {
     transition: transform 0.5s ease
 
 }
-
+ul{
+    margin:0;
+    padding:0;
+    display:flex;
+  }
+  
+  ul li{
+    list-style:none;
+    margin:0 20px;
+    transition:0.5s;
+  }
+  
+  ul li a{
+    display: block;
+    position:relative;
+    text-decoration:none;
+    padding:5px;
+    font-size:18px;
+    font-family: sans-serif;
+    color:#fff;
+    text-transform:uppercase;
+    transition:0.5s;
+  }
+  
+  ul:hover li a{
+    transform:scale(1.5);
+    opacity:0.2;
+    filter:blur(5px);
+  }
+  
+  ul li a:hover{
+    transform:scale(2);
+    opacity:1;
+    filter:blur(0);
+    text-decoration:none;
+    color:#fff;
+  }
+  
+  ul li a:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#ff497c;
+    transition:0.5s;
+    transform-origin:right;
+    transform:scaleX(0);
+    z-index:-1;
+  }
+  
+  ul li a:hover:before{
+    transition:transform 0.5s;
+    transform-origin:left;
+    transform:scaleX(1);
+  }

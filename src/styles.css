@@ -7,19 +7,26 @@ body, ul {
 /* Common Styles */
 body {
     font-family: Arial, sans-serif;
+    margin: 0; /* Remove default body margin */
 }
 
 header {
-    background-color: #333;
-    color: rgb(255, 255, 255);
+    background-color: transparent; /* Make the header background transparent */
+    color: rgb(252, 240, 240);
     padding: 20px;
     text-align: center;
+    position: relative; /* Add this for positioning */
+    z-index: 1; /* Ensure the header stays on top of other elements */
 }
 
 nav {
-    background-color: #202c92;
-    padding: 10px;
+    background-color: transparent; /* Make the navbar invisible */
     text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure the navbar stays on top of other elements */
 }
 
 nav ul {
@@ -34,30 +41,27 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(12, 0, 0);
     font-weight: bold;
 }
 
 /* Page Styles */
 .page {
-    padding: 40px;
+    height: 100vh; /* Set the height to 100vh to cover the entire viewport */
+    padding: 0; /* Remove padding to eliminate space */
     text-align: center;
-    color: #fff;
-}
-
-/* Customize the background image and gradient here */
-.page {
-    background: linear-gradient(to bottom, #0000cc, #000);
-    background-image: url('your-background-image.jpg');
+    color: #0a0000;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    position: relative; /* Add this for positioning */
+    z-index: 0; /* Ensure the page content stays below the navbar */
 }
 
 /* Main Heading Style */
 h1 {
     font-size: 36px;
-    margin-bottom: 20px;
+    margin: 0; /* Remove margin to eliminate space */
 }
 
 /* Section Heading Style */
@@ -69,4 +73,14 @@ h2 {
 /* Paragraph Style */
 p {
     font-size: 18px;
+}
+
+/* Add styles for the image */
+.image-class {
+    width: 100%; /* Ensure the image covers the entire viewport width */
+    height: 100%; /* Ensure the image covers the entire viewport height */
+    position: fixed; /* Position the image as a background */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place the image behind the content */
 }

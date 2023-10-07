@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+
+    <link rel="stylesheet" href="../static/playground/styles.css">
+    <title>Your Website</title>
+</head>
+
+<body>
+    <header>
+        <h1>What's up with the water?</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#landing">Home</a></li>
+            <li><a href="#team">About the Team</a></li>
+            <li><a href="#map">Map</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="landing" class="page">
+            <h2>Landing Page</h2>
+            <!-- Customize the background image below -->
+            <img src="your-background-image.jpg" alt="Background Image">
+        </section>
+        <section id="team" class="page">
+            <h2>About the Team</h2>
+            <p>This is the page about your team.</p>
+        </section>
+        <section id="map" class="page">
+            <h2>Map</h2>
+            <p>This is the map page.</p>
+        </section>
+    </main>
+</body>
+
+</html>
+<style>
+    /* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Common Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #202c92;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+/* Page Styles */
+.page {
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Customize the background image and gradient here */
+.page {
+    background: linear-gradient(to bottom, #0000cc, #000);
+    background-image: url('your-background-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Main Heading Style */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Section Heading Style */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Paragraph Style */
+p {
+    font-size: 18px;
+}
+</style>

@@ -3,17 +3,9 @@ import altair as alt
 import os
 import pandas as pd
 
-# Get the absolute path to the image file
-image_path = os.path.abspath('1-1.png')
+st.image('1-1.png', use_column_width=False)
 
-# Create a list with the absolute path
-image_urls = [image_path]
-
-for url in image_urls:
-    st.image(url, use_column_width=False)
-
-dataframe = pd.read_json('waterQ.json')
-st.write(dataframe.size)
+dataframe = pd.read_json('waterquality.json')
 
 option = st.selectbox(
     'Statistics for Water Quality:',
@@ -21,11 +13,16 @@ option = st.selectbox(
 
 find_button = st.button("Look at Statistics")
 
+st.write("All chemicals tested:")
+st.write(dataframe["VARIABLE"].unique())
+
 if find_button:
+    st.write("Annual chart with all details")
     dataframe_new = dataframe[dataframe['DATE'].dt.year == int(option)]
     st.write(dataframe_new)
     # extract the two columns in the graph
     selected_columns = dataframe_new[['VARIABLE', 'VALUE_VALEUR']]
+    st.write("Chemical name vs. concentration chart:")
     st.write(selected_columns)
 
     chart = alt.Chart(selected_columns).mark_line(color='blue').encode(  # Line graph

@@ -25,9 +25,9 @@ if find_button:
     st.write("Chemical name vs. concentration chart:")
     st.write(selected_columns)
 
-    chart = alt.Chart(selected_columns).mark_line(color='blue').encode(  # Line graph
-        x='VARIABLE',
-        y='VALUE_VALEUR',
+    chart = alt.Chart(selected_columns).mark_line(color='blue').encode(
+        x=alt.X('VARIABLE', title='Chemical Name'), 
+        y=alt.Y('VALUE_VALEUR', title='Concentration'),
         tooltip=['VARIABLE', 'VALUE_VALEUR']
     ).properties(
         title='Line Graph of Water Concentration',

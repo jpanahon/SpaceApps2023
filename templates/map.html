@@ -16,14 +16,20 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About the Team</a></li>
+            <li><a href="map.html">Map</a></li>
         </ul>
     </nav>
     <main>
+        <h1 class = "formtext">Search Example</h1>
+    <form class = "form" action="/search" method="GET">
+        <input class type="text" name="q" placeholder="Search pls" />
+        <button type="submit">Search</button>
+    </form>
         <section id="map" class="page">
-            <h2>Map</h2>
-            <p>This is the map page.</p>
+           
         </section>
-        <script src="preload-images.js"></script>
+        {% load static %}
+        <script src="../static/js/preload-images.js"></script>
 </body>
 
     </main>

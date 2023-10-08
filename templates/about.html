@@ -11,12 +11,10 @@
         /* Add the hover effect for planet images */
         .planet-hover:hover {
             transform: scale(1.3); /* Scale the planet to 120% of its initial size */
-            
-}
-
+        }
     </style>
 </head>
-<body>
+<about-body>
     <header>
         <h1></h1>
     </header>
@@ -28,27 +26,137 @@
             <li><a href="map.html">Map</a></li>
         </ul>
     </nav>
-    <!-- Planet images with the hover effect class -->
-    <img class="planetssun planet-hover" src="../static/img/580b585b2edbce24c47b270f.png">
-    <img class="planetsmerc planet-hover" src="../static/img/mercury (1).png">
-    <img class="planetsven planet-hover" src="../static/img/venus.png">
-    <img class="planetsgaia planet-hover" src="../static/img/earth.png">
-    <img class="planetsmars planet-hover" src="../static/img/mars (1).png">
-    <img class="planetsjew planet-hover" src="../static/img/jupiter.png">
-    <img class="planetssat planet-hover" src="../static/img/saturn.png">
 
+    <h1 id="message">CLICK ON A PLANET 😉</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Planet images with the hover effect class -->
+    {% load static %}
+    <img class="planetssun planet-hover" src="../static/img/580b585b2edbce24c47b270f.png" onclick="scrollToSection('team1')">
+    <img class="planetsmerc planet-hover" src="../static/img/mercury (1).png" onclick="scrollToSection('team2')">
+    <img class="planetsven planet-hover" src="../static/img/venus.png" onclick="scrollToSection('team3')">
+    <img class="planetsgaia planet-hover" src="../static/img/earth.png" onclick="scrollToSection('team4')">
+    <img class="planetsmars planet-hover" src="../static/img/mars (1).png" onclick="scrollToSection('team5')">
+    <img class="planetsjew planet-hover" src="../static/img/jupiter.png" onclick="scrollToSection('team6')">
+    <img class="planetssat planet-hover" src="../static/img/saturn.png" onclick="scrollToSection('team7')">
     <!-- Your main content here -->
     <main>
-        <section id="team" class="page">
-            <h1 class="team">About the Team</h1>
-            <p></p>
+        <section id="team1" class="page">
+            <br> </br> 
+            <br> </br> 
+            <h1 class="typewriter">About the Project</h1>
+            <p>Welcome to our website! We are a passionate team of university students dedicated to raising awareness about the conservation of endangered species. Our project began as a collective endeavor to share knowledge and information about these remarkable creatures that share our planet. With a shared commitment to wildlife preservation, we've built this platform to provide a comprehensive database of endangered species, their statuses, and detailed profiles. Our goal is to inspire and educate visitors about the importance of biodiversity and the urgent need for conservation efforts. Together, we believe that by spreading awareness, we can make a positive impact on the future of these incredible species and the ecosystems they call home. Created for the 2023 NASA SpaceApps Challenge!</p>
         </section>
+
+        <section id="team2" class="page">
+            <div class="content">
+                <h1 class="typewriter">Umayer Khan</h1>
+                <div class="text-and-image">
+                    <br>
+                    <a style="text-decoration:none; color:skyblue" href="https://www.linkedin.com/in/UmayerK/"><b>My Linkedin</b></a>
+                    <p style="color:skyblue; display:inline"><b> | </b></p>
+                    <a style="text-decoration:none; color:skyblue" href="https://github.com/UmayerK"><b>My GitHub</b></a>
+                    <p>My name is Umayer khan , a second year computer science student at the university of Windsor. My interests include full stack development , debating , playing chess and lifting weights. My main contributions to the project was developing the front end as well as researching and assisting in the back end. Using simple html css and JavaScript I learned to create a responsive and visually appealing ui to showcase the project. In conjunction with my team my minor contributions included researching the structure of the backend, finding resources and aiding in the development and structure of the project.</p>
+                    <img src="../static/img/umayer.png" alt="alternative-text" class="faces1">
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section id="team3" class="page">
+            <div class="content">
+                <h1 class="typewriter">Jovic Panahon</h1>
+                <div class="text-and-image">
+                    <br>
+                    <a style="text-decoration:none; color:skyblue" href="https://www.linkedin.com/in/jovicpanahon/"><b>My Linkedin</b></a>
+                    <p style="color:skyblue; display:inline"><b> | </b></p>
+                    <a style="text-decoration:none; color:skyblue" href="https://github.com/jpanahon"><b>My GitHub</b></a>
+                    <p>My name is Jovic Panahon, I am a third year computer science student at the University of Windsor. I am interested in a lot of things in Computer Science, which has led me to have projects across many fields. Outside of computer programming, graphic design is my passion. In this hackathon I primarily worked on data acquisition by using a mix of research and web scraping, Django database integration, git conflicts with our shared repository, graphics for the frontend, and making sure everything worked properly.</p>
+                    <img src="../static/img/jovic.png" alt="alternative-text" class="faces2">
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section id="team4" class="page">
+            <div class="content">
+                <h1 class="typewriter">Ahmad Munim</h1>
+                <div class="text-and-images">
+                    <br>
+                    <a style="text-decoration:none; color:skyblue" href="https://www.linkedin.com/in/ahmadmunim/"><b>My Linkedin</b></a>
+                    <p style="color:skyblue; display:inline"><b> | </b></p>
+                    <a style="text-decoration:none; color:skyblue" href="https://github.com/ahmadmunim"><b>My GitHub</b></a>
+                    <p>My name is Ahmad Munim. I'm a third year computer science student at the University of Windsor. I'm interested in full stack web development and data science. My main contributions on this website includes server side development using the Django framework, frontend and bringing all the features and components together using version control. In this hackathon, I learned and used the Django framework for the first time. My minor contributions includes working with the data of endangered species. I'm happy I attended this hackathon because I was able to explore my interests and gained knowledge in said interests.</p>
+                    <img src="../static/img/ahmad.png" alt="alternative-text" class="faces3">
+                </div>
+            </div> 
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section id="team5" class="page">
+            <div class="content">
+                <h1 class="typewriter">Rocio Rueda</h1>
+                <div class="text-and-image">
+                    <br>
+                    <a style="text-decoration:none; color:skyblue" href="https://www.linkedin.com/in/rocio-rueda-705a4a26a/"><b>My Linkedin</b></a>
+                    <p style="color:skyblue; display:inline"><b> | </b></p>
+                    <a style="text-decoration:none; color:skyblue" href="https://github.com/rbrueda"><b>My GitHub</b></a>
+                    <p>Hello, my name is Rocio. I am a second year Computer Science student at the University of Windsor. Right now I am trying to learn more about Javascript and data science. Outside of my interest in coding, I also like to spend my free time drawing, spending time outdoors, and baking. My contribution for the project was mainly on collecting data and filtering it out for endangered species and water quality. In this project I learned more about the Pandas library and Django.</p>
+                    <img src="../static/img/rocio.png" alt="alternative-text" class="faces4">
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section id="team6" class="page">
+            <div class="content">
+                <h1 class="typewriter">Isteyak</h1>
+                <div class="text-and-image">
+                    <br>
+                    <a style="text-decoration:none; color:skyblue" href="https://www.linkedin.com/in/isteyak-409578230/"><b>My Linkedin</b></a>
+                    <p style="color:skyblue; display:inline"><b> | </b></p>
+                    <a style="text-decoration:none; color:skyblue" href="https://github.com/Isteyak12"><b>My GitHub</b></a>
+                    <p>Hi there, this is me Isteyak. I am a first-year computer science, international student at the University of Windsor. Previously, I was studying computer science and engineering at the Independent University in Bangladesh from 2021 to mid 2022 until I transferred to the University of Windsor. I just attended my first hackathon and ICPC in Canada where I figured learning, debugging and the need to learn crucial technologies asap.📱 Fun fact, C++ is my favourite programming language but I work with Python, and I dream computer vision ML.</p>
+                    <img src="../static/img/isteyak.png" alt="alternative-text" class="faces5">
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section id="team7" class="page">
+            <div class="content">
+                <h1 class="typewriter">Asma Altumi</h1>
+                <div class="text-and-image">
+                    <br>
+                    <a style="text-decoration:none; color:skyblue" href="https://www.linkedin.com/in/altumiasma/"><b>My Linkedin</b></a>
+                    <p>Hello! I'm Asma Altumi, a 2nd-year Computer Science student at the University of Windsor. With a passion for web development and data analysis, I've contributed significantly to the "What's Up With This Water?" project. My responsibilities encompassed data collection, extraction, API research, and data scraping. This initiative enabled me to sharpen my teamwork and problem-solving skills, especially under time constraints. It also provided a platform to combine my academic knowledge with real-world creativity, intensifying my profound interest in data. Beyond my current expertise, I am eagerly looking forward to delving into 3D modeling,  machine learning, and backend development. This project has been pivotal in my professional and personal growth, offering experiences that transcend the traditional classroom setting.</p>
+                    <img src="../static/img/asma.png" alt="alternative-text" class="faces6">
+                </div>
+            </div>
+        </section>
+
+
     </main>
     
     <!-- Background image -->
-    <img src="../static/img/wp7034448-minimalist-universe-wallpapers.png" alt="alternative-text" class="image-class">
+    <img src="../static/img/wp7034448-minimalist-universe-wallpapers.jpg" alt="alternative-text" class="image-class">
     
     <!-- Include any JavaScript or external scripts you need -->
-    <script src="preload-images.js"></script>
-</body>
+    {% load static %}
+    <script src="../static/js/preload-images.js"></script>
+</about-body>
 </html>
+
+

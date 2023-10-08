@@ -3,7 +3,7 @@ import altair as alt
 import os
 import pandas as pd
 
-st.image('src/1-1.png', use_column_width=False)
+st.image('1-1.png', use_column_width=False)
 
 dataframe = pd.read_json('waterquality.json')
 

@@ -1,0 +1,64 @@
+{
+  "Provinces": {
+    "Alberta": [
+      {
+        "Year": "2020",
+        "Water Quality Index (WQI)": 80,
+        "Total Phosphorus (TP) Concentration (µg/L)": 10
+      },
+      {
+        "Year": "2021",
+        "Water Quality Index (WQI)": 82,
+        "Total Phosphorus (TP) Concentration (µg/L)": 11
+      }
+    ],
+    "British Columbia": [
+      {
+        "Year": "2020",
+        "Water Quality Index (WQI)": 85,
+        "Total Phosphorus (TP) Concentration (µg/L)": 9
+      },
+      {
+        "Year": "2021",
+        "Water Quality Index (WQI)": 87,
+        "Total Phosphorus (TP) Concentration (µg/L)": 10
+      }
+    ],
+    "Ontario": [
+      {
+        "Year": "2020",
+        "Water Quality Index (WQI)": 78,
+        "Total Phosphorus (TP) Concentration (µg/L)": 12
+      },
+      {
+        "Year": "2021",
+        "Water Quality Index (WQI)": 80,
+        "Total Phosphorus (TP) Concentration (µg/L)": 11
+      }
+    ],
+    "Quebec": [
+      {
+        "Year": "2020",
+        "Water Quality Index (WQI)": 85,
+        "Total Phosphorus (TP) Concentration (µg/L)": 8
+      },
+      {
+        "Year": "2021",
+        "Water Quality Index (WQI)": 88,
+        "Total Phosphorus (TP) Concentration (µg/L)": 9
+      }
+    ],
+    "Manitoba": [
+      {
+        "Year": "2020",
+        "Water Quality Index (WQI)": 79,
+        "Total Phosphorus (TP) Concentration (µg/L)": 11
+      },
+      {
+        "Year": "2021",
+        "Water Quality Index (WQI)": 81,
+        "Total Phosphorus (TP) Concentration (µg/L)": 10
+      }
+    ]
+  }
+}

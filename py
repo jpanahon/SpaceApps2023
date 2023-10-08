@@ -1,4 +1,20 @@
-INSERT INTO spaceapps2023_animals (common_name, population, status, last_assessment_date, scientific_name, legal_common_name, legal_population, schedule_status, sara_schedule, listed_on, location, taxonomic_group, under_consideration_for, gic_decision)  VALUES ('Acadian Flycatcher',NULL,'Endangered','2010-04-25 00:00:00','Empidonax virescens','Acadian Flycatcher',NULL,'Endangered','Schedule 1','2003-06-05 00:00:00','Ontario','Birds',NULL,'Add'),
+CREATE TABLE IF NOT EXISTS data (
+    `COSEWIC_common_name` VARCHAR(51) CHARACTER SET utf8,
+    `COSEWIC_population` VARCHAR(66) CHARACTER SET utf8,
+    `COSEWIC_status` VARCHAR(15) CHARACTER SET utf8,
+    `COSEWIC_last_assessment_date` DATETIME,
+    `Scientific_name` VARCHAR(41) CHARACTER SET utf8,
+    `Legal_common_name` VARCHAR(41) CHARACTER SET utf8,
+    `Legal_population` VARCHAR(66) CHARACTER SET utf8,
+    `Schedule_status` VARCHAR(15) CHARACTER SET utf8,
+    `SARA_schedule` VARCHAR(11) CHARACTER SET utf8,
+    `Listed_on` DATETIME,
+    `Range` VARCHAR(227) CHARACTER SET utf8,
+    `Taxonomic_group` VARCHAR(21) CHARACTER SET utf8,
+    `Under_consideration_for` VARCHAR(13) CHARACTER SET utf8,
+    `GIC_Decision` VARCHAR(36) CHARACTER SET utf8
+);
+INSERT INTO data VALUES ('Acadian Flycatcher',NULL,'Endangered','2010-04-25 00:00:00','Empidonax virescens','Acadian Flycatcher',NULL,'Endangered','Schedule 1','2003-06-05 00:00:00','Ontario','Birds',NULL,'Add'),
 	('Allegheny Mountain Dusky Salamander','Carolinian population','Endangered','2018-04-27 00:00:00','Desmognathus ochrophaeus','Allegheny Mountain Dusky Salamander','Carolinian population','Endangered','Schedule 1','2003-06-05 00:00:00','Ontario','Amphibians',NULL,'Uplist'),
 	('American Badger',NULL,'Non-active','2000-05-01 00:00:00','Taxidea taxus','American Badger',NULL,'No Status','No schedule',NULL,'British Columbia, Alberta, Saskatchewan, Manitoba, Ontario','Mammals (terrestrial)',NULL,NULL),
 	('American Badger jacksoni subspecies',NULL,'Endangered','2012-11-25 00:00:00','Taxidea taxus  jacksoni','American Badger jacksoni subspecies',NULL,'Endangered','Schedule 1','2003-06-05 00:00:00','Ontario','Mammals (terrestrial)',NULL,'Add'),
@@ -248,7 +264,7 @@ INSERT INTO spaceapps2023_animals (common_name, population, status, last_assessm
 	('Monarch',NULL,'Endangered','2016-11-27 00:00:00','Danaus plexippus','Monarch',NULL,'Special Concern','Schedule 1','2003-06-05 00:00:00','British Columbia, Prince Edward Island, Alberta, Saskatchewan, Manitoba, Ontario, Quebec, New Brunswick, Nova Scotia','Arthropods',NULL,'Add'),
 	('Mottled Duskywing','Great Lakes Plains population','Endangered','2012-11-25 00:00:00','Erynnis martialis','Mottled Duskywing','Great Lakes Plains population','Endangered','Schedule 1','2023-02-03 00:00:00','Ontario, Quebec','Arthropods',NULL,'Add'),
 	('Mudpuppy',NULL,'Not at Risk','2000-05-01 00:00:00','Necturus maculosus',NULL,NULL,'No Status','No schedule',NULL,'Manitoba, Ontario, Quebec','Amphibians',NULL,NULL);
-INSERT INTO spaceapps2023_animals (common_name, population, status, last_assessment_date, scientific_name, legal_common_name, legal_population, schedule_status, sara_schedule, listed_on, location, taxonomic_group, under_consideration_for, gic_decision)  VALUES ('Nelson''s Sharp-tailed Sparrow',NULL,'Not at Risk','1998-04-01 00:00:00','Ammodramus nelsoni',NULL,NULL,'No Status','No schedule',NULL,'British Columbia, Prince Edward Island, Alberta, Saskatchewan, Manitoba, Ontario, Quebec, New Brunswick, Nova Scotia','Birds',NULL,NULL),
+INSERT INTO data VALUES ('Nelson''s Sharp-tailed Sparrow',NULL,'Not at Risk','1998-04-01 00:00:00','Ammodramus nelsoni',NULL,NULL,'No Status','No schedule',NULL,'British Columbia, Prince Edward Island, Alberta, Saskatchewan, Manitoba, Ontario, Quebec, New Brunswick, Nova Scotia','Birds',NULL,NULL),
 	('Nine-spotted Lady Beetle',NULL,'Endangered','2016-04-29 00:00:00','Coccinella novemnotata','Nine-spotted Lady Beetle',NULL,'Endangered','Schedule 1','2023-02-03 00:00:00','British Columbia, Alberta, Saskatchewan, Manitoba, Ontario, Quebec','Arthropods',NULL,'Add'),
 	('Nodding Pogonia',NULL,'Endangered','2010-11-26 00:00:00','Triphora trianthophoros','Nodding Pogonia',NULL,'Endangered','Schedule 1','2003-06-05 00:00:00','Ontario','Vascular Plants',NULL,'Add'),
 	('Northern Barrens Tiger Beetle',NULL,'Endangered','2009-11-27 00:00:00','Cicindela patruela','Northern Barrens Tiger Beetle',NULL,'Endangered','Schedule 1','2012-06-20 00:00:00','Ontario, Quebec','Arthropods',NULL,'Add'),
@@ -421,3 +437,25 @@ INSERT INTO spaceapps2023_animals (common_name, population, status, last_assessm
 	('Yellow Rail',NULL,'Special Concern','2009-11-27 00:00:00','Coturnicops noveboracensis','Yellow Rail',NULL,'Special Concern','Schedule 1','2003-06-05 00:00:00','British Columbia, Northwest Territories, Alberta, Saskatchewan, Manitoba, Ontario, Quebec, New Brunswick','Birds',NULL,'Add'),
 	('Yellow-banded Bumble Bee',NULL,'Special Concern','2015-05-01 00:00:00','Bombus terricola','Yellow-banded Bumble Bee',NULL,'Special Concern','Schedule 1','2018-05-30 00:00:00','British Columbia, Prince Edward Island, Yukon, Northwest Territories, Alberta, Saskatchewan, Manitoba, Ontario, Quebec, Newfoundland and Labrador, New Brunswick, Nova Scotia','Arthropods',NULL,'Add'),
 	('Yellow-breasted Chat virens subspecies',NULL,'Endangered','2011-11-25 00:00:00','Icteria virens  virens','Yellow-breasted Chat virens subspecies',NULL,'Endangered','Schedule 1','2003-06-05 00:00:00','Ontario','Birds',NULL,'Uplist');
+#!/usr/bin/env python
+"""Django's command-line utility for administrative tasks."""
+import os
+import sys
+
+
+def main():
+    """Run administrative tasks."""
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'spaceapps2023.settings')
+    try:
+        from django.core.management import execute_from_command_line
+    except ImportError as exc:
+        raise ImportError(
+            "Couldn't import Django. Are you sure it's installed and "
+            "available on your PYTHONPATH environment variable? Did you "
+            "forget to activate a virtual environment?"
+        ) from exc
+    execute_from_command_line(sys.argv)
+
+
+if __name__ == '__main__':
+    main()

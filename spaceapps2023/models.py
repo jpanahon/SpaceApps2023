@@ -15,3 +15,6 @@ class Animals(models.Model):
     taxonomic_group = models.CharField(max_length=21, null=True)
     under_consideration_for = models.CharField(max_length=13, null=True)
     gic_decision = models.CharField(max_length=36, null=True)
+
+# class WaterQuality(models.Model):
+#     site_no = 

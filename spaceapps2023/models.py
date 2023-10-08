@@ -16,5 +16,16 @@ class Animals(models.Model):
     under_consideration_for = models.CharField(max_length=13, null=True)
     gic_decision = models.CharField(max_length=36, null=True)
 
-# class WaterQuality(models.Model):
-#     site_no = 
+class WaterQuality(models.Model):
+    site_number = models.CharField(max_length=10)
+    date = models.DateTimeField()
+    flag_marqueur = models.CharField(max_length=1)
+    value_valeur = models.DecimalField(max_digits=7, decimal_places=4)
+    sdl_lde = models.DecimalField(max_digits=6, decimal_places=4)
+    mdl_ldm = models.IntegerField()
+    vmv_code = models.IntegerField()
+    unit = models.CharField(max_length=8)
+    variable = models.CharField(max_length=31)
+    variable_fr = models.CharField(max_length=35)
+    status = models.CharField(max_length=1)
+    sample_id_chantillon = models.CharField(max_length=12)

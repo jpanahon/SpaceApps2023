@@ -12,7 +12,7 @@ body {
 }
 </style>
 """
-st.image("1-1.png", use_column_width=False)
+st.image("1.png", use_column_width=False)
 # Apply custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
 

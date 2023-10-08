@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website - Map</title>
-    {% load static %}
-
-    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -16,12 +14,17 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About the Team</a></li>
+            <li><a href="map.html">Map</a></li>
         </ul>
     </nav>
     <main>
+        <h1 class = "formtext">Search Example</h1>
+    <form class = "form" action="/search" method="GET">
+        <input class type="text" name="q" placeholder="Search pls" />
+        <button type="submit">Search</button>
+    </form>
         <section id="map" class="page">
-            <h2>Map</h2>
-            <p>This is the map page.</p>
+           
         </section>
         <script src="preload-images.js"></script>
 </body>

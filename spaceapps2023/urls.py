@@ -25,5 +25,5 @@ urlpatterns = [
     path('', home, name='home'),
     path('index.html', home, name='home'),
     path('about.html', about_page, name='about'),
-    path('map.html', map_page, name = 'map'),
+    path('marine.html', map_page, name = 'map')
 ]

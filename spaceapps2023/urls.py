@@ -19,15 +19,11 @@ from django.urls import path, include
 from spaceapps2023.views import home
 from spaceapps2023.views import about_page
 from spaceapps2023.views import map_page
-from spaceapps2023.views import app4a_integration
-from spaceapps2023.views import app_integration
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('index.html', home, name='home'),
     path('about.html', about_page, name='about'),
-    path('map.html', map_page, name = 'map'),
-    path('app_integration.html', app_integration, name='app'),
-    path('app4a_integration.html', app4a_integration, name='app4a')
+    path('marine.html', map_page, name = 'map')
 ]

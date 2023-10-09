@@ -12,7 +12,7 @@ body {
 }
 </style>
 """
-st.image("1.png", use_column_width=False)
+st.image("src/1.png", use_column_width=False)
 # Apply custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
 
@@ -21,7 +21,7 @@ st.title("Marine Animals Directory")
 st.header("List of Marine Animals")
 
 # Load the data from the local JSON file
-data = pd.read_json("mine.json")
+data = pd.read_json("src/mine.json")
 
 
 # Create a search bar and filter the data

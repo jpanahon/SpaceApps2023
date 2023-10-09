@@ -12,19 +12,37 @@ def about_page(req):
 def map_page(req):
     return render(req, 'map.html')
 
-def streamlit_integration(req):
-    proc = subprocess.Popen(["streamlit", "run", "app4a.py"])
-    proc.wait()
+def app_integration(req):
+    subprocess.Popen(["streamlit", "run", "src/app.py"])
+#     proc.wait()
 
-# Get the process details using psutil
-    process = psutil.Process(proc.pid)
+# # Get the process details using psutil
+#     process = psutil.Process(proc.pid)
 
-    # Get the list of network connections for the process
-    connections = process.connections(kind="inet")
+#     # Get the list of network connections for the process
+#     connections = process.connections(kind="inet")
 
-    # Extract the IP address from the connections
-    ip_address = connections[0].laddr.ip  # Assuming the first connection contains the IP address
+#     # Extract the IP address from the connections
+#     ip_address = connections[0].laddr.ip  # Assuming the first connection contains the IP address
 
-    print("IP Address:", ip_address)
+    # print("IP Address:", ip_address)
 
-    return HttpResponse("Streamlit app is running on a separate server.")
+    return HttpResponse("app is running")
+    
+
+def app4a_integration(req):
+    subprocess.Popen(["streamlit", "run", "app4a.py"])
+#     proc.wait()
+
+# # Get the process details using psutil
+#     process = psutil.Process(proc.pid)
+
+#     # Get the list of network connections for the process
+#     connections = process.connections(kind="inet")
+
+#     # Extract the IP address from the connections
+#     ip_address = connections[0].laddr.ip  # Assuming the first connection contains the IP address
+
+    # print("IP Address:", ip_address)
+
+    return HttpResponse("app4a is running")
